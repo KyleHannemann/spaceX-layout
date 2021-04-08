@@ -1,0 +1,29 @@
+**upload resume;
+**links to socail media, linkedin etc;
+**way to download resume;
+**link to github for now with projects;
+**add text to pictures(possibly add bar on bottome with arrows and text)
+
+
+
+
+**Navbar 
+-stays at top of screen when scrolling
+-shows options when full size
+-options on hover color from white to light grey.
+-some options hidden when full size
+-hides options in dropdown menu when screen minimized. 
+    -dropdown menu transitions from right of screen out about 40% of the width
+
+
+**Main 
+-four pictures stacked on top of one another. behind text and buttons
+-each picture takes up full height and width of screen regardless of screeen size.
+-text with button over each picture
+-on button hover. transition fill from bottom to top
+-on button exit fill exits from bottom to top
+
+
+**Footer
+-only at very bottom of scroll(not sticky )
+-options for socail media, contact etc.

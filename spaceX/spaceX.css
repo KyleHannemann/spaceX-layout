@@ -1,0 +1,214 @@
+*{
+    box-sizing: border-box;
+}
+body {
+    background-color: black;
+}
+#wrapper1 {
+    background-image: url(/staryNight.jpg);
+    
+    background-size: 100% 100%;
+    height: 100vh;
+    background-repeat: no-repeat;
+}
+#introWrapper{
+  
+    width: 100%;
+    height: 30%;
+    display: flex;
+    align-items: flex-end;
+    
+    
+}
+#iAm{
+    color: black;
+    margin-right: 1vw;
+    margin-left:35.5%;
+    font-size: 5vh;
+    color: white;
+    
+}
+.letter {
+    float:left;
+    font-size: 5vh;
+    color:white;
+}
+.letterSpace {
+    float: left;
+    font-size: 5vh;
+    opacity: 0;
+}
+
+.offScreen{
+    transition: 3s;
+    opacity: 0;
+}
+.onScreen{
+    transition: 3s;
+    opacity: 1;
+    
+    
+}
+.footer {
+    width: 100vw;
+    height: 50px;
+    background-color: black;
+    color: white;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+.footer > a{
+    margin-left: 10vw;
+    text-decoration: none;
+    display: block;
+}
+
+
+#wrapper2 {
+    background-color: black;
+    height: 100vh;
+    width: 100%;
+}
+@media screen and (max-width: 700px) {
+    .navItems{display: none;}
+    #drop{display: inline-block}
+}
+@media screen and (min-width: 700px) {
+    #drop{display: none}
+}
+.navbar{
+    position: fixed;
+    width: 100%;
+    top: 0;
+    overflow: hidden;
+    background-color: inherit;
+    
+}
+.navItem{
+    display: inline-block;
+    text-decoration: none;
+    padding-left: 40px;
+    font-size: 24px;
+    color:white;
+    
+}
+.navItem > a {
+    text-decoration: none;
+    display:inline-block;
+    color: white;
+}
+.navItem > a:hover{
+    color:darkgrey;
+}
+#drop {
+    float: right;
+    position: fixed;
+    color: white;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    margin-right: 40px;
+   
+}
+#home {
+    font-size: 24px;
+
+    padding-left: 5px;
+}
+#closeNavbarSide{
+    color: white;
+    float: right;
+    padding-right: 20px;
+}
+.navBarSide{
+    position: fixed;
+    transition: 1s;
+    right: 0;
+    top: 0;
+    height: 100%;
+    overflow: hidden;
+    width: 0%;
+    background-color: black;
+    z-index: 5;
+}
+.increaseWidth{
+    width: 40%;
+}
+.hidePanel{
+    display:none;
+}
+.navItemSide{
+    text-decoration: none;
+    display: block;
+    padding: 20px;
+    color: white;
+}
+.navItemSide > a{
+    text-decoration: none;
+    display:inline-block;
+    color: white;
+}
+.navItemSide > a:hover{
+    color:darkgrey
+}
+.panel1{background-image: url(/kyleTash.jpeg);}
+.panel2{background-image: url(/fam.jpeg);}
+.panel3{background-image: url(/rj1.jpeg);}
+.panel4{background-image: url(/football.jpeg);}
+.panel5{background-image: url(/football1.jpeg);}
+
+
+.panel{background-size:cover;
+width:100%;
+height: 100%;
+transition: 2s;
+}
+
+
+#back {
+    background-color: inherit;
+    color: white;
+    float: left;
+    margin-left: 5%;
+    background-color: Transparent;
+    background-repeat:no-repeat;
+    border: none;
+    cursor:pointer;
+    overflow: hidden;
+    outline:none;
+    font-size: 15vh;
+
+}
+#back:hover{
+    color:rgb(125, 141, 53);
+    transition: 1s;
+}
+#forward:hover{
+    color:rgb(125, 141, 53);
+    transition: 1s;
+}
+.slideShowControls{
+    height: 19vh;
+    width: 100%;
+    position: absolute;
+    top: 185%;
+    background-color: darkolivegreen;
+}
+
+
+#forward {
+    float: right;
+    margin-right: 5%;
+   
+    color: white;
+    background-color: Transparent;
+    background-repeat:no-repeat;
+    border: none;
+    cursor:pointer;
+    overflow: hidden;
+    outline:none;
+    font-size: 15vh;
+}
