@@ -2,6 +2,7 @@
     box-sizing: border-box;
 }
 body {
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
     background-color: black;
 }
 #wrapper1 {
@@ -11,6 +12,56 @@ body {
     height: 100vh;
     background-repeat: no-repeat;
 }
+#wrapper3 {
+    background-image: url(/space.jpg);
+    background-size: 100% 100%;
+    height: 100vh;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    
+    
+}
+.project {
+    height: 30vh;
+    width: 40vw;
+    background-color: inherit;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    transition: 1s;
+    transform: translateY(150%);
+    opacity: 0;
+}
+.projectActive{
+    transform: translateY(0%);
+    opacity: 1;
+}
+.projectWords {
+    text-align: center;
+    font-size: 4vh;
+}
+.projectButton {
+    width: 14vw;
+    height: 8vh;
+    background-color: Transparent;
+    background-repeat:no-repeat;
+    color: white;
+    border: black 2px solid;
+    cursor:pointer;
+    overflow: hidden;
+    outline:none;
+    transition: 1s;
+
+}
+.projectButton:hover{
+    background-color: white;
+    color: black;
+}
+
 #introWrapper{
   
     width: 100%;
@@ -26,12 +77,14 @@ body {
     margin-left:35.5%;
     font-size: 5vh;
     color: white;
+    text-shadow: 1px 1px 10px;
     
 }
 .letter {
     float:left;
     font-size: 5vh;
     color:white;
+    text-shadow: 1px 1px 10px;
 }
 .letterSpace {
     float: left;
@@ -65,22 +118,87 @@ body {
     text-decoration: none;
     display: block;
 }
+#resume{
+    height: 100%;
+    width: 100%;
+}
+#emailForm{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+    flex-wrap: nowrap;
 
+}
+#emailForm > h1{
+    color:white;
+}
+.emailText{
+    color:white;
+    font-size: 16px;
+    text-align: center;
+}
+#personName, #subject{
+    height: 5vh;
+    width: 30vw;
+}
+#createEmail {
+    width: 16vw;
+    height: 10vh;
+    background-color: rgb(6, 6, 187);
+    background-repeat:no-repeat;
+    color: white;
+    border: black 2px solid;
+    cursor:pointer;
+    overflow: hidden;
+    outline:none;
+    transition: 1s;
+    border-radius: 10%;
+    font-size: 3vh;
+
+}
+#createEmail:hover{
+    background-color:green;
+    
+}
+
+
+#body{
+    height: 20vh;
+    width: 50vw;
+
+}
+#wrapper5 {
+    background-image: url(/space2.jpg);
+    background-size: 100% 100%;
+    height: 100vh;
+    background-repeat: no-repeat;
+    height: 100vh;
+    width: 100%;
+}
 
 #wrapper2 {
     background-color: black;
     height: 100vh;
     width: 100%;
 }
-@media screen and (max-width: 700px) {
+#wrapper4 {
+    background-color:green;
+    height: 100vh;
+    width: 100%;
+}
+@media screen and (max-width: 800px) {
     .navItems{display: none;}
     #drop{display: inline-block}
 }
-@media screen and (min-width: 700px) {
+@media screen and (min-width: 800px) {
     #drop{display: none}
 }
 .navbar{
     position: fixed;
+    z-index: 1;
     width: 100%;
     top: 0;
     overflow: hidden;
@@ -91,7 +209,7 @@ body {
     display: inline-block;
     text-decoration: none;
     padding-left: 40px;
-    font-size: 24px;
+    font-size: 2vw;
     color:white;
     
 }
@@ -100,7 +218,17 @@ body {
     display:inline-block;
     color: white;
 }
+
 .navItem > a:hover{
+    color:darkgrey;
+}
+.footer > a {
+    text-decoration: none;
+    display:inline-block;
+    color: white;
+}
+
+.footer > a:hover{
     color:darkgrey;
 }
 #drop {
@@ -111,10 +239,14 @@ body {
     right: 10px;
     font-size: 24px;
     margin-right: 40px;
+    padding: 5px;
+    border: solid 1px white;
+    box-shadow: 5px 5px 8px ;
    
 }
+
 #home {
-    font-size: 24px;
+    font-size: 2vw;
 
     padding-left: 5px;
 }
@@ -138,6 +270,7 @@ body {
     width: 40%;
 }
 .hidePanel{
+    transition: 2s;
     display:none;
 }
 .navItemSide{
@@ -171,8 +304,8 @@ transition: 2s;
 #back {
     background-color: inherit;
     color: white;
-    float: left;
-    margin-left: 5%;
+    
+     left: 5%;
     background-color: Transparent;
     background-repeat:no-repeat;
     border: none;
@@ -180,6 +313,8 @@ transition: 2s;
     overflow: hidden;
     outline:none;
     font-size: 15vh;
+    position: absolute;
+    top: 185%;
 
 }
 #back:hover{
@@ -190,19 +325,26 @@ transition: 2s;
     color:rgb(125, 141, 53);
     transition: 1s;
 }
-.slideShowControls{
+.introText{
+    font-size: 24px;
     height: 19vh;
     width: 100%;
     position: absolute;
     top: 185%;
-    background-color: darkolivegreen;
+    background-color: inherit;
+    color: white;
+    text-align: center;
+    font-weight: 900;
 }
 
 
 #forward {
-    float: right;
-    margin-right: 5%;
-   
+  
+    
+    position: absolute;
+    top: 185%;
+    right: 5%;
+    
     color: white;
     background-color: Transparent;
     background-repeat:no-repeat;

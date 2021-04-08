@@ -10,7 +10,7 @@ closeSideNav.addEventListener("click", close)
 function close(){
     navbarSide.classList.remove("increaseWidth");
 }
-const phrases = ["Kyle.Hannemann","A.Husband", "A.Father", "A.Student", "An.Athlete", "A.Person"];
+const phrases = ["Kyle.Hannemann","A.Husband", "A.Father", "A.Student", "An.Athlete", "A.Brother", "A.Human.Being:)"];
 let phrasesElements = [];
 for (var i = 0; i < phrases.length; i++){
     let phrase = [];
@@ -53,7 +53,7 @@ function startWordRemoval(){
     movingLetters = document.getElementsByClassName("letter");
     spaces = document.getElementsByClassName("letterSpace");
 
-    setTimeout(startLetterRemoval, 2000);
+    setTimeout(startLetterRemoval, 1000);
 }
 function startLetterRemoval(){
     letterRemoval = setInterval(removeLetter, 300);
@@ -114,5 +114,45 @@ function panelBack(){
            }
             }
         }
+let projects = document.getElementsByClassName("project");
+let projectWrapper = document.getElementById("wrapper3");
+
+function checkSlide(e){
+    let projectWrapperPos = projectWrapper.getBoundingClientRect();
+    let slideIn = projectWrapperPos.y;
+    if (slideIn < 150){
+        for (var i = 0; i < projects.length; i++){
+        projects[i].classList.add("projectActive");
+        }
+    
+    }
+    console.log(slideIn);
+    
     
 
+}
+window.addEventListener("scroll", debounce(checkSlide));
+
+function debounce(func, wait = 20, immediate = true) {
+    var timeout;
+    return function() {
+      var context = this, args = arguments;
+      var later = function() {
+        timeout = null;
+        if (!immediate) func.apply(context, args);
+      };
+      var callNow = immediate && !timeout;
+      clearTimeout(timeout);
+      timeout = setTimeout(later, wait);
+      if (callNow) func.apply(context, args);
+    };
+  };
+    
+let email = document.getElementById("createEmail");
+email.addEventListener("click", function(e){
+    e.preventDefault();
+    let name = document.getElementById("personName").value;
+    let subject = document.getElementById("subject").value;
+    let body = document.getElementById("body").value;
+    location.href = `mailto:hannemannkyle@gmail.com?subject=${" " + subject + " "}from${" " + name + " "}&body=${body}`;
+});

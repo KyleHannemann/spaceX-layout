@@ -13,8 +13,8 @@
         <ul class="navItems">
             <div class="navItem" id="home"><a href="#wrapper1">Home</a></div>
             <li class="navItem"><a href="#wrapper2">About Me</a></li>
-            <li class="navItem">Projects</li>
-            <li class="navItem">Resume</li>
+            <li class="navItem"><a href="#wrapper3">Projects</a></li>
+            <li class="navItem"><a href="#wrapper4">Resume</a></li>
             <li class="navItem">Contact Info</li>
         </ul>
         <div id="drop">///</div>
@@ -24,8 +24,8 @@
             <div id="closeNavbarSide">X</div>
             <li class="navItemSide" id="homeSide"><a href="#wrapper1">Home</a></li>
             <li class="navItemSide"><a href="#wrapper2">About Me</a></li>
-            <li class="navItemSide">Projects</li>
-            <li class="navItemSide">Resume</li>
+            <li class="navItemSide"><a href="#wrapper3">Projects</a></li>
+            <li class="navItemSide"><a href="#wrapper4">Resume</a></li>
             <li class="navItemSide">Contact Info</li>
         </ul>
     </div>
@@ -37,17 +37,47 @@
 </div>
 </div>
 <div id="wrapper2">
-    <div class="panel panel1 showPanel" ><div class="introText"></div></div>
-    <div class="panel panel2  hidePanel" ><div class="introText"></div></div>
-    <div class="panel panel3 hidePanel"><div class="introText"></div></div>
-    <div class="panel panel4 hidePanel"><div class="introText"></div></div>
-    <div class="panel panel5 hidePanel"><div class="introText"></div></div>
-    <div class="slideShowControls">
+    <div class="panel panel1 showPanel" ><div class="introText">This is some text that I made up</div></div>
+    <div class="panel panel2  hidePanel" ><div class="introText">This is some text that I made up1</div></div>
+    <div class="panel panel3 hidePanel"><div class="introText">This is some text that I made up2</div></div>
+    <div class="panel panel4 hidePanel"><div class="introText">This is some text that I made up3</div></div>
+    <div class="panel panel5 hidePanel"><div class="introText">This is some text that I made up4</div></div>
+    
     <button id="back"> &#8606;</button> 
     <button id="forward"> &#8608; </button>
-    </div>
+    
 </div>
-<footer class="footer"><a>LinkedIn</a><a>Instagram</a><a>Facebook</a></footer>
+<div id="wrapper3">
+    <div class="project"><p class="projectWords">This is some project I made at Devmountain</p><button class="projectButton">View</button></div>
+    <div class="project"><p class="projectWords">This is some other project I made</p><button class="projectButton">View</button></div>
+</div>
+<div id="wrapper4">
+<embed src="resume.pdf" id="resume">
+</div>
+<div id="wrapper5">
+    <form id="emailForm">
+        <h1>Email Me at hannemannkyle@gmail.com</h1>
+        <div>
+            <p class="emailText">please enter youre name</p>
+            <input type="text" id="personName" placeholder="enter name">
+        </div>
+        <div>
+        <p class="emailText">enter a subject</p>
+                   <input type="text" id="subject" placeholder="email subject">
+        </div>
+        <div>
+            <p class="emailText">content of email</p>
+            <input type="text" id="body" placeholder="body">
+
+        </div>
+        <div>
+            <input type="submit" value="create email" id="createEmail">
+
+        </div>
+        
+    </form>
+</div>
+<footer class="footer"><a href="https://github.com/KyleHannemann">GitHub</a><a href="https://www.linkedin.com/in/kyle-hannemann-75805319b/">LinkedIn</a><a href="https://www.facebook.com/kyle.hannemann.9/">Facebook</a></footer>
     <script src="spaceX.js">
 
     </script>
